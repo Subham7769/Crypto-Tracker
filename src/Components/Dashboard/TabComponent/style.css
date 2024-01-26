@@ -1,0 +1,19 @@
+.gridView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 2rem;
+}
+.ListView {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 768px) {
+  .ListView {
+    width: 95%;
+  }
+}

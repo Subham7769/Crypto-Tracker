@@ -1,0 +1,85 @@
+main {
+  display: flex;
+  padding: 3rem;
+  gap: 3rem;
+}
+.textContainer {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.textContainer a{
+text-decoration: none;
+}
+.Track-crypto-heading,
+.Real-Time-heading {
+  font-size: 8.5rem;
+  margin: 0;
+}
+.Track-crypto-heading {
+  color: var(--black);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black);
+}
+.Track-crypto-heading:hover {
+  color: var(--white);
+  -webkit-text-stroke-color: var(--black);
+  transition: all 0.3s;
+}
+.Real-Time-heading {
+  color: var(--blue);
+}
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+.imageContainer {
+  flex: 0.25;
+  position: relative;
+}
+.phone {
+  position: absolute;
+  z-index: 10;
+  min-width: 280px;
+  max-width: 300px;
+}
+.gradient {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  min-width: 200px;
+  max-width: 260px;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 5rem;
+  }
+  .textContainer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    gap: 1.5rem;
+  }
+  .textContainer > h1 {
+    font-size: 3.5rem;
+  }
+
+  .imageContainer {
+    flex: 1;
+    display: block;
+  }
+  .phone {
+    min-width: 280px;
+    max-width: 300px;
+    left: 20%;
+  }
+  .gradient {
+    left: 25%;
+    min-width: 200px;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,29 @@
+.Search-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+
+}
+.search-container{
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkgrey);
+    width: 1000%;
+    border-radius: 2rem;
+}
+.input-text{
+    font-size: 1.2rem;
+    flex: 1;
+    background-color: transparent;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    color: var(--black);
+}
+.input-text::placeholder{
+    font-size: 1.2rem;
+}
