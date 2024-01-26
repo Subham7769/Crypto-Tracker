@@ -4,7 +4,7 @@ import StarsIcon from "@mui/icons-material/Stars";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { Tooltip } from "@mui/material";
-import { convertNumber } from "../../../functions/ConverterNumber";
+import { convertNumber } from "../../../functions/converterNumber.js";
 
 const List = ({ coin }) => {
   return (
