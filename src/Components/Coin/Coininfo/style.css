@@ -1,0 +1,12 @@
+.coin-info-heading{
+margin: 1rem;
+}
+.coin-info-desc{
+margin: 1rem;
+}
+.coin-info-desc a{
+    color: var(--blue);
+}
+.coin-info-desc a:hover{
+    color: rgb(47, 54, 255);
+}

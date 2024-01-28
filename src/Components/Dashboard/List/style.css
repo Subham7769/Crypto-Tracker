@@ -1,11 +1,13 @@
+.List-item{
+  text-decoration: none;
+}
 .list-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  margin: 1.5rem;
+  margin: 0rem 1rem;
   padding: 1rem;
-  width: 100%;
   box-sizing: border-box;
 }
 .list-row td {
@@ -17,35 +19,43 @@
   transition: all 0.3s;
   border-radius: 0.3rem;
 }
-.td-image{
-    width: 3rem!important;
-    margin-right: 0.5rem;
+.td-image {
+  width: 3rem !important;
+  margin-right: 0.5rem;
 }
-.right-align{
-    text-align: right;
+.right-align {
+  text-align: right;
 }
-.center-align{
-    text-align: center;
+.center-align {
+  text-align: center;
 }
-.Mobile{
-display: none;
+.Mobile {
+  display: none;
 }
 @media only screen and (max-width: 768px) {
-    .list-row td {
-        width: 20%;
-        font-size: 80%!important;
-    }
-    .td-image{
-        width: 2rem!important;
-    }
-    .coin-logo{
-        width: 2rem;
-        height: 2rem;
-    }
-    .Desktop{
+  .list-row {
+    gap: 0.3rem;
+    margin: 0.2rem;
+    padding: 1rem 0.25rem;
+  }
+  .list-row td {
+    width: 114%;
+    font-size: 70% !important;
+  }
+  .td-image {
+    width: fit-content !important;
+  }
+  .coin-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .Desktop {
     display: none;
-    }
-    .Mobile{
-        display: block;
-    }
+  }
+  .Mobile {
+    display: block;
+  }
+  .center-align {
+    text-align: left;
+  }
 }

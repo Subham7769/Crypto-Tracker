@@ -46,8 +46,8 @@ export default function TabComponent({ coins }) {
         </TabList>
         <TabPanel value="1">
           <div className="gridView">
-            {coins.map((coin, i) => {
-              return <Grid coin={coin} key={i} />;
+            {coins.map((coin, index) => {
+              return <Grid coin={coin} key={index} index={index}/>;
             })}
           </div>
         </TabPanel>
@@ -55,8 +55,8 @@ export default function TabComponent({ coins }) {
 
           <table className="ListView">
 
-            {coins.map((coin, i) => {
-              return <List coin={coin} key={i} />
+            {coins.map((coin, index) => {
+              return <List coin={coin} key={index} index={index}/>
             })}
 
           </table>

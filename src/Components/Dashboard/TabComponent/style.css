@@ -13,7 +13,11 @@
   margin-right: auto;
 }
 @media only screen and (max-width: 768px) {
+  .gridView {
+    gap: 1rem;
+    margin: 0.8rem 0.8rem;
+  }
   .ListView {
-    width: 95%;
+    width: 100%;
   }
 }

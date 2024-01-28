@@ -3,10 +3,16 @@ import "./style.css";
 import StarsIcon from "@mui/icons-material/Stars";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const Grid = ({ coin }) => {
+const Grid = ({ coin,index }) => {
   return (
-    <div
+    <Link to={`/coin/${coin.id}`} className="grid-item-link">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.1*index}}
       className={
         coin.price_change_percentage_24h > 0
           ? "grid-item"
@@ -21,7 +27,7 @@ const Grid = ({ coin }) => {
             <p className="coinName">{coin.name}</p>
           </div>
           <div>
-            <StarsIcon />
+            {/* <StarsIcon /> */}
           </div>
         </div>
       </div>
@@ -62,7 +68,8 @@ const Grid = ({ coin }) => {
           <p className="mkt-Cap">
             Market Cap: ${coin.market_cap.toLocaleString()}
           </p>
-    </div>
+    </motion.div>
+    </Link>
   );
 };
 
