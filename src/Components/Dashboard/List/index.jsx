@@ -4,7 +4,7 @@ import StarsIcon from "@mui/icons-material/Stars";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { Tooltip } from "@mui/material";
-import { convertNumber } from "../../../functions/converterNumber.js";
+import { convertNumber } from "../../../functions/convertNumber.js";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
