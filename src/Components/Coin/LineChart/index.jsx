@@ -16,7 +16,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
       intersect: false,
     },
     scales: {
-      y: {
+      y1: {
         type: "linear",
         display: true,
         position: "left",

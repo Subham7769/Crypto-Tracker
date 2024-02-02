@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  z-index: 1;
 }
 .grid-item:hover {
   border: 1px solid var(--green) !important;
@@ -34,6 +35,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
+
 }
 .coinSymbol {
   color: var(--black);

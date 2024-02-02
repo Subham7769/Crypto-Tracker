@@ -20,8 +20,12 @@
   border-radius: 0.3rem;
 }
 .td-image {
-  width: 3rem !important;
+  width: fit-content!important; 
   margin-right: 0.5rem;
+}
+.coin-logo{
+  width: 3rem!important; 
+  height: auto!important;
 }
 .right-align {
   text-align: right;
@@ -32,6 +36,9 @@
 .Mobile {
   display: none;
 }
+a{
+  text-decoration: none;
+}
 @media only screen and (max-width: 768px) {
   .list-row {
     gap: 0.3rem;
@@ -39,15 +46,14 @@
     padding: 1rem 0.25rem;
   }
   .list-row td {
-    width: 114%;
+    width: 14%;
     font-size: 70% !important;
   }
   .td-image {
     width: fit-content !important;
   }
   .coin-logo {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.7rem!important; 
   }
   .Desktop {
     display: none;

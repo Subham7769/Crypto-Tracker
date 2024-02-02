@@ -7,6 +7,10 @@ import getCoinPrices from "../functions/getCoinPrices";
 import { coinObject } from "../functions/convertObject";
 import Loader from "../Components/Common/Loader";
 import List from "../components/Dashboard/List";
+import CoinInfo from "../Components/Coin/CoinInfo";
+import LineChart from '../Components/Coin/LineChart';
+import { settingChartData } from "../functions/settingChartData";
+
 
 const ComparePage = () => {
   const [crypto1, setCrypto1] = useState("bitcoin");
@@ -16,6 +20,10 @@ const ComparePage = () => {
   const [days, setDays] = useState(30);
   const [loading, setLoading] = useState(true);
   const [priceType, setPriceType] = useState("usd");
+  const [chartData, setChartData] = useState({
+    labels: [],
+    datasets: [],
+  });
 
   function handleDaysChange(event) {
     setDays(event.target.value);
@@ -61,13 +69,15 @@ const ComparePage = () => {
       if (prices1.length > 0 && prices2.length > 0) {
         console.log("both prices are fetched", prices1, prices2);
         setLoading(false);
+      settingChartData(setChartData,prices1,data1,prices2,data2)
+
       }
     }
   }
 
   useEffect(() => {
-    // getData()
-  }, []);
+    getData()
+  }, [crypto1,crypto2, days]);
 
   return (
     <div>
@@ -92,7 +102,9 @@ const ComparePage = () => {
             <div className="grey-wrapper">
               <List coin={crypto2Data} delay={0.1} />
             </div>
-          <p>Chart will be shown here</p>
+            <div className="grey-wrapper">
+              <LineChart chartData={chartData} priceType={priceType} multiAxis={true} />
+            </div>
           <CoinInfo name={crypto1Data.name} desc={crypto1Data.desc} />
           <CoinInfo name={crypto2Data.name} desc={crypto2Data.desc} />
         </>

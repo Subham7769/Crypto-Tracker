@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoinInfo from "../components/Coin/CoinInfo";
+import CoinInfo from "../Components/Coin/CoinInfo";
 import LineChart from "../Components/Coin/LineChart";
 import Footer from "../components/Common/Footer";
-import Header from "../components/Common/Header";
-import Loader from "../components/Common/Loader";
+import Header from "../Components/Common/Header";
+import Loader from '../Components/Common/Loader'
 import List from "../components/Dashboard/List";
 import { coinObject } from "../functions/convertObject";
 import getCoinData from "../functions/getCoinData";
@@ -77,7 +77,7 @@ function CoinPage() {
               handlePriceTypeChange={handlePriceTypeChange}
               priceType={priceType}
             />
-            <LineChart chartData={chartData} priceType={priceType} />
+            <LineChart chartData={chartData} priceType={priceType} multiAxis={false} />
           </div>
           <CoinInfo name={coin.name} desc={coin.desc} />
         </>

@@ -1,14 +1,16 @@
 import React from "react";
 import "./style.css";
-import StarsIcon from "@mui/icons-material/Stars";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import WatchListIcon from "../../WatchList/WatchListIcon";
 
 const Grid = ({ coin,index }) => {
+
+  
   return (
-    <Link to={`/coin/${coin.id}`} className="grid-item-link">
+    
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,15 +24,19 @@ const Grid = ({ coin,index }) => {
       <div className="data-flex">
         <img src={coin.image} alt="" className="coin-logo" draggable="false" />
         <div className="name-col">
+        <Link to={`/coin/${coin.id}`} className="grid-item-link">
           <div>
             <p className="coinSymbol">{coin.symbol}</p>
             <p className="coinName">{coin.name}</p>
           </div>
-          <div>
-            {/* <StarsIcon /> */}
+          </Link>
+          <div className="WatchListIcon">
+            <WatchListIcon coinId={coin.id}/>
           </div>
         </div>
+
       </div>
+      <Link to={`/coin/${coin.id}`} className="grid-item-link">
       <div className="chip-flex">
         <div
           className={
@@ -68,8 +74,8 @@ const Grid = ({ coin,index }) => {
           <p className="mkt-Cap">
             Market Cap: ${coin.market_cap.toLocaleString()}
           </p>
-    </motion.div>
     </Link>
+    </motion.div>
   );
 };
 
