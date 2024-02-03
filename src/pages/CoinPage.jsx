@@ -63,7 +63,7 @@ function CoinPage() {
   };
 
   return (
-    <section>
+    <div>
       <Header />
       {isLoading || !coin?.id || !chartData ? (
         <Loader />
@@ -90,7 +90,7 @@ function CoinPage() {
         </>
       )}
       <Footer />
-    </section>
+    </div>
   );
 }
 
