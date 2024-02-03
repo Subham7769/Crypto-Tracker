@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Pagination from "@mui/material/Pagination";
 import './style.css'
+import coinsContext from "../../../Context/coinsContext";
 
-const PaginationComponent = ({page, setPage,handleChange}) => {
+const PaginationComponent = () => {
+  const {page,handlePageChange}= useContext(coinsContext)
 
   return (
     <div className="Pagination-item">
       <Pagination
         count={10}
         page={page}
-        onChange={(event,value)=>handleChange(event,value)}
+        onChange={(event,value)=>handlePageChange(event,value)}
         sx={{
           color: "var(--black)",
           "& .Mui-selected ": {

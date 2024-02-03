@@ -1,35 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddTaskRoundedIcon from "@mui/icons-material/AddTaskRounded";
-import {getWatchList } from '../../functions/getWatchList'
 
-const WatchListIcon = ({coinId}) => {
-  const [watchListCoinIds,setWatchListCoinIds] = useState([]);
+const WatchListIcon = ({ coinId }) => {
   const [added, setAdded] = useState(false);
 
-useEffect(() =>{
-  setWatchListCoinIds(getWatchList());
-  setAdded(getWatchList().includes(coinId)?true:false);
-},[watchListCoinIds]);
+  useEffect(() => {
+    var watchListCoinIds = JSON.parse(localStorage.getItem("watchlist")) || [];
+    setAdded(watchListCoinIds.includes(coinId));
+  }, [coinId]);
 
-function WatchListHandle(e){
-  e.preventDefault();
+  function WatchListHandle() {
     let newWatchList;
+    let watchListCoinIds = JSON.parse(localStorage.getItem("watchlist")) || [];
     if (added) {
-      newWatchList = watchListCoinIds.filter(id => id !== coinId);
+      //remove
+      newWatchList = watchListCoinIds.filter((id) => id !== coinId);
     } else {
+      //add
       newWatchList = [...watchListCoinIds, coinId];
     }
     localStorage.setItem("watchlist", JSON.stringify(newWatchList));
     setAdded(!added);
-    setWatchListCoinIds(newWatchList);
-  };
 
-
-
-
+    // Dispatch a custom event
+    window.dispatchEvent(new CustomEvent('watchlistUpdated'));
+  }
 
   return (
-    <div onClick={(e) => WatchListHandle(e)} >
+    <div onClick={WatchListHandle}>
       <AddTaskRoundedIcon
         style={{
           color: added ? "var(--blue)" : "var(--grey)",
@@ -38,7 +36,6 @@ function WatchListHandle(e){
       />
     </div>
   );
-
-      }
+};
 
 export default WatchListIcon;

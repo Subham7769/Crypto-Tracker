@@ -96,9 +96,23 @@ body {
 .IconW{
   font-size: 2rem;
 }
+.watchlistEmpty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
 @media only screen and (max-width: 768px) {
   .IconW{
     font-size: 1.5rem!important;
+  }
+  .coin-days-flex{
+    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column!important; */
   }
 }

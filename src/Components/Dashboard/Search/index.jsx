@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.css'
 import SearchIcon from '@mui/icons-material/Search';
+import coinsContext from '../../../Context/coinsContext';
 
-const Search = ({search, setSearch}) => {
+const Search = () => {
+  const {search, setSearch} = useContext(coinsContext)
 
 
   return (

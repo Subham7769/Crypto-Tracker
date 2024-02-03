@@ -121,7 +121,7 @@ const List = ({ coin, index }) => {
         </Link>
 
         <td style={{ width: "6%" }}>
-          <WatchListIcon />
+          <WatchListIcon coinId={coin.id}/>
         </td>
       </motion.tr>
     </div>

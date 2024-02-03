@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CoinInfo from "../Components/Coin/CoinInfo";
 import LineChart from "../Components/Coin/LineChart";
@@ -12,13 +12,13 @@ import getCoinPrices from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
 import SelectDays from "../Components/Coin/SelectDays/selectDays";
 import PriceToggle from "../Components/Coin/PriceToggle/priceToggle";
+import coinsContext from "../Context/coinsContext";
 
 function CoinPage() {
+  const {currency,setCurrency,isLoading, setLoading} = useContext(coinsContext)
   const { id } = useParams();
   const [coin, setCoin] = useState();
-  const [loading, setLoading] = useState(false);
   const [days, setDays] = useState(30);
-  const [priceType, setPriceType] = useState("usd");
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
@@ -33,7 +33,7 @@ function CoinPage() {
     const data = await getCoinData(id);
     if (data) {
       coinObject(setCoin, data); //For Coin Obj being passed in the List
-      const prices = await getCoinPrices(id, days, priceType);
+      const prices = await getCoinPrices(id, days, currency);
       if (prices) {
         settingChartData(setChartData, prices, data);
         setLoading(false);
@@ -44,16 +44,16 @@ function CoinPage() {
   const handleDaysChange = async (event) => {
     setLoading(true);
     setDays(event.target.value);
-    const prices = await getCoinPrices(id, event.target.value, priceType);
+    const prices = await getCoinPrices(id, event.target.value, currency);
     if (prices) {
       settingChartData(setChartData, prices, coin);
       setLoading(false);
     }
   };
 
-  const handlePriceTypeChange = async (event) => {
+  const handlecurrencyChange = async (event) => {
     setLoading(true);
-    setPriceType(event.target.value);
+    setCurrency(event.target.value);
     const prices = await getCoinPrices(id, days, event.target.value);
     if (prices) {
       settingChartData(setChartData, prices, coin);
@@ -64,20 +64,20 @@ function CoinPage() {
   return (
     <div>
       <Header />
-      {loading || !coin?.id || !chartData ? (
+      {isLoading || !coin?.id || !chartData ? (
         <Loader />
       ) : (
         <>
           <div className="grey-wrapper">
             <List coin={coin} delay={0.1} />
           </div>
-          <div className="grey-wrapper">
+          <div className="grey-wrapper upperFilter">
             <SelectDays handleDaysChange={handleDaysChange} days={days} />
             <PriceToggle
-              handlePriceTypeChange={handlePriceTypeChange}
-              priceType={priceType}
+              handlecurrencyChange={handlecurrencyChange}
+              currency={currency}
             />
-            <LineChart chartData={chartData} priceType={priceType} multiAxis={false} />
+            <LineChart chartData={chartData} currency={currency} multiAxis={false} />
           </div>
           <CoinInfo name={coin.name} desc={coin.desc} />
         </>

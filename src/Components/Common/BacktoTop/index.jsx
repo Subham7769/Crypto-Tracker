@@ -3,8 +3,7 @@ import "./style.css";
 import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
 
 const BacktoTop = () => {
-  let mybutton = document.getElementById("myBtn");
-
+  
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
@@ -15,9 +14,9 @@ const BacktoTop = () => {
       document.body.scrollTop > 100 ||
       document.documentElement.scrollTop > 100
     ) {
-      mybutton.style.display = "block";
+      document.getElementById("myBtn").style.display = "block";
     } else {
-      mybutton.style.display = "none";
+      document.getElementById("myBtn").style.display = "none";
     }
   }
 

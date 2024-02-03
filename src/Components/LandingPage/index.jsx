@@ -4,6 +4,8 @@ import gradient from "../../assets/gradient.png";
 import Button from "../Common/Button";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { RWebShare } from "react-web-share";
+
 
 const LandingPage = () => {
   return (
@@ -42,7 +44,17 @@ const LandingPage = () => {
           <NavLink to="/Dashboard">
             <Button text={"Dashboard"} outlined={false} />
           </NavLink>
-          <Button text={"share"} outlined={true} />
+          <RWebShare
+            data={{
+              text: "Crypto Tracker",
+              url: "https://crypto-tracker-ashy-ten.vercel.app/",
+              title: "Crypto Tracker",
+            }}
+          >
+            <div>
+              <Button text={"share"} outlined={true} />
+            </div>
+          </RWebShare>
         </motion.div>
       </div>
       <div className="imageContainer">

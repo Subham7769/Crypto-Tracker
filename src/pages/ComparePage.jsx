@@ -19,7 +19,7 @@ const ComparePage = () => {
   const [crypto2Data, setCrypto2Data] = useState({});
   const [days, setDays] = useState(30);
   const [loading, setLoading] = useState(true);
-  const [priceType, setPriceType] = useState("usd");
+  const [currency, setcurrency] = useState("usd");
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
@@ -44,8 +44,8 @@ const ComparePage = () => {
       coinObject(setCrypto1Data, data);
     }
     // fetching prices for both coins
-    const prices1 = await getCoinPrices(crypto1, days, priceType);
-    const prices2 = await getCoinPrices(crypto2, days, priceType);
+    const prices1 = await getCoinPrices(crypto1, days, currency);
+    const prices2 = await getCoinPrices(crypto2, days, currency);
     if (prices1.length > 0 && prices2.length > 0) {
       console.log("both prices are fetched", prices1, prices2);
       setLoading(false);
@@ -64,8 +64,8 @@ const ComparePage = () => {
       coinObject(setCrypto2Data, data2);
     }
     if (data1 && data2) {
-      const prices1 = await getCoinPrices(crypto1, days, priceType);
-      const prices2 = await getCoinPrices(crypto2, days, priceType);
+      const prices1 = await getCoinPrices(crypto1, days, currency);
+      const prices2 = await getCoinPrices(crypto2, days, currency);
       if (prices1.length > 0 && prices2.length > 0) {
         console.log("both prices are fetched", prices1, prices2);
         setLoading(false);
@@ -103,7 +103,7 @@ const ComparePage = () => {
               <List coin={crypto2Data} delay={0.1} />
             </div>
             <div className="grey-wrapper">
-              <LineChart chartData={chartData} priceType={priceType} multiAxis={true} />
+              <LineChart chartData={chartData} currency={currency} multiAxis={true} />
             </div>
           <CoinInfo name={crypto1Data.name} desc={crypto1Data.desc} />
           <CoinInfo name={crypto2Data.name} desc={crypto2Data.desc} />
