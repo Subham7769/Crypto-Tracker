@@ -1,10 +1,33 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import EmailIcon from "@mui/icons-material/Email";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-const Footer = () => {
+function Footer() {
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   return (
-    <div>Footer</div>
-  )
+    <div className="footer">
+      <h2 className="logo" onClick={() => topFunction()}>
+        CryptoTracker<span>.</span>
+      </h2>
+      <div className="social-links">
+        <a href="https://facebook.com">
+          <FacebookIcon className="social-link" />
+        </a>
+        <a href="mailto:shubham.rapariya2@gmail.com">
+          <EmailIcon className="social-link" />
+        </a>
+        <a href="https://www.instagram.com">
+          <InstagramIcon className="social-link" />
+        </a>
+      </div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;

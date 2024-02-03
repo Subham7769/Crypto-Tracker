@@ -13,17 +13,17 @@ function PriceToggle({ priceType, handlePriceTypeChange }) {
         onChange={handlePriceTypeChange}
         sx={{
           "&.Mui-selected": {
-            color: "var(--blue) !important",
+            color: "var(--primary) !important",
           },
-          borderColor: "var(--blue)",
+          borderColor: "var(--primary)",
           border: "unset !important",
           "& .MuiToggleButtonGroup-grouped": {
             border: "1px solid !important",
             borderColor: "unset",
-            color: "var(--blue)",
+            color: "var(--primary)",
           },
           "& .MuiToggleButton-standard": {
-            color: "var(--blue)",
+            color: "var(--primary)",
           },
         }}
       >

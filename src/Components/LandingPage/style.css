@@ -28,7 +28,7 @@ text-decoration: none;
   transition: all 0.3s;
 }
 .Real-Time-heading {
-  color: var(--blue);
+  color: var(--primary);
 }
 .buttonContainer {
   display: flex;

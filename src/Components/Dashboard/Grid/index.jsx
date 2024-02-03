@@ -11,6 +11,7 @@ const Grid = ({ coin,index }) => {
   
   return (
     
+    <Link to={`/coin/${coin.id}`} className="grid-item-link">
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -24,19 +25,17 @@ const Grid = ({ coin,index }) => {
       <div className="data-flex">
         <img src={coin.image} alt="" className="coin-logo" draggable="false" />
         <div className="name-col">
-        <Link to={`/coin/${coin.id}`} className="grid-item-link">
           <div>
             <p className="coinSymbol">{coin.symbol}</p>
             <p className="coinName">{coin.name}</p>
           </div>
-          </Link>
+
           <div className="WatchListIcon">
             <WatchListIcon coinId={coin.id}/>
           </div>
         </div>
 
       </div>
-      <Link to={`/coin/${coin.id}`} className="grid-item-link">
       <div className="chip-flex">
         <div
           className={
@@ -74,8 +73,8 @@ const Grid = ({ coin,index }) => {
           <p className="mkt-Cap">
             Market Cap: ${coin.market_cap.toLocaleString()}
           </p>
-    </Link>
     </motion.div>
+    </Link>
   );
 };
 

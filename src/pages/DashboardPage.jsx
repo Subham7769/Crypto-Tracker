@@ -6,6 +6,7 @@ import PaginationComponent from "../Components/Dashboard/Pagination";
 import Loader from "../Components/Common/Loader";
 import BacktoTop from "../Components/Common/BacktoTop";
 import coinsContext from "../Context/coinsContext";
+import Footer from "../components/Common/Footer";
 
 const DashboardPage = () => {
   const {coins,isLoading,paginatedCoins,search} = useContext(coinsContext)
@@ -19,7 +20,7 @@ const DashboardPage = () => {
   );
 
   return (
-    <>
+    <section>
       <Header /> 
       <BacktoTop/>
       {isLoading ? (
@@ -33,7 +34,8 @@ const DashboardPage = () => {
           )}{" "}
         </div>
       )}
-    </>
+      <Footer/>
+    </section>
   );
 };
 

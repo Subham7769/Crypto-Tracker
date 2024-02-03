@@ -32,9 +32,9 @@ function LineChart({ chartData, priceType, multiAxis }) {
           },
         },
       },
-      y2: multiAxis && {
+      y2: {
         type: "linear",
-        display: true,
+        display: multiAxis ? true : false,
         position: "right",
         ticks: {
           callback: function (value) {

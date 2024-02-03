@@ -9,7 +9,8 @@ const WatchListIcon = ({ coinId }) => {
     setAdded(watchListCoinIds.includes(coinId));
   }, [coinId]);
 
-  function WatchListHandle() {
+  function WatchListHandle(e) {
+    e.preventDefault();
     let newWatchList;
     let watchListCoinIds = JSON.parse(localStorage.getItem("watchlist")) || [];
     if (added) {
@@ -23,14 +24,14 @@ const WatchListIcon = ({ coinId }) => {
     setAdded(!added);
 
     // Dispatch a custom event
-    window.dispatchEvent(new CustomEvent('watchlistUpdated'));
+    window.dispatchEvent(new CustomEvent("watchlistUpdated"));
   }
 
   return (
-    <div onClick={WatchListHandle}>
+    <div onClick={(e) => WatchListHandle(e)}>
       <AddTaskRoundedIcon
         style={{
-          color: added ? "var(--blue)" : "var(--grey)",
+          color: added ? "var(--primary)" : "var(--grey)",
         }}
         className="IconW"
       />

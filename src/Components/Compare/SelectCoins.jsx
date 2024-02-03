@@ -12,14 +12,14 @@ const SelectCoins = ({ crypto1,  crypto2, handleCoinChange}) => {
     height: "2.5rem",
     color: "var(--black)",
     "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "var(--blue)",
+      borderColor: "var(--primary)",
     },
     "& .MuiSvgIcon-root": {
       color: "var(--black)",
     },
     "&:hover": {
       "&& fieldset": {
-        borderColor: "var(--blue)",
+        borderColor: "var(--primary)",
       },
     },
   };

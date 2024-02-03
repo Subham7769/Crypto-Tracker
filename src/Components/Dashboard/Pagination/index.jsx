@@ -15,9 +15,9 @@ const PaginationComponent = () => {
         sx={{
           color: "var(--black)",
           "& .Mui-selected ": {
-            backgroundColor: "var(--blue) !important",
+            backgroundColor: "var(--primary) !important",
             color: "#fff !important",
-            borderColor: "var(--blue) !important",
+            borderColor: "var(--primary) !important",
           },
           "& .MuiPaginationItem-ellipsis": {
             border: "0px solid var(--grey) !important",

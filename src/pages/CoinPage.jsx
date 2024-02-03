@@ -4,7 +4,7 @@ import CoinInfo from "../Components/Coin/CoinInfo";
 import LineChart from "../Components/Coin/LineChart";
 import Footer from "../components/Common/Footer";
 import Header from "../Components/Common/Header";
-import Loader from '../Components/Common/Loader'
+import Loader from "../Components/Common/Loader";
 import List from "../components/Dashboard/List";
 import { coinObject } from "../functions/convertObject";
 import getCoinData from "../functions/getCoinData";
@@ -15,7 +15,8 @@ import PriceToggle from "../Components/Coin/PriceToggle/priceToggle";
 import coinsContext from "../Context/coinsContext";
 
 function CoinPage() {
-  const {currency,setCurrency,isLoading, setLoading} = useContext(coinsContext)
+  const { currency, setCurrency, isLoading, setLoading } =
+    useContext(coinsContext);
   const { id } = useParams();
   const [coin, setCoin] = useState();
   const [days, setDays] = useState(30);
@@ -62,28 +63,34 @@ function CoinPage() {
   };
 
   return (
-    <div>
+    <section>
       <Header />
       {isLoading || !coin?.id || !chartData ? (
         <Loader />
       ) : (
         <>
-          <div className="grey-wrapper">
-            <List coin={coin} delay={0.1} />
-          </div>
+          <table className="grey-wrapper">
+            <tbody className="ListView">
+              <List coin={coin} delay={0.1} />
+            </tbody>
+          </table>
           <div className="grey-wrapper upperFilter">
             <SelectDays handleDaysChange={handleDaysChange} days={days} />
             <PriceToggle
               handlecurrencyChange={handlecurrencyChange}
               currency={currency}
             />
-            <LineChart chartData={chartData} currency={currency} multiAxis={false} />
+            <LineChart
+              chartData={chartData}
+              currency={currency}
+              multiAxis={false}
+            />
           </div>
           <CoinInfo name={coin.name} desc={coin.desc} />
         </>
       )}
       <Footer />
-    </div>
+    </section>
   );
 }
 

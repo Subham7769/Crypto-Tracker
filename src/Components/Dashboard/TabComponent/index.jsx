@@ -9,7 +9,6 @@ import "./style.css";
 import Grid from "./../Grid";
 import List from "../List";
 
-
 export default function TabComponent({ coins }) {
   const [value, setValue] = useState("1");
 
@@ -20,7 +19,7 @@ export default function TabComponent({ coins }) {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#3a80e9",
+        main: getComputedStyle(document.documentElement).getPropertyValue('--primary').trim(),
       },
     },
   });
@@ -34,10 +33,7 @@ export default function TabComponent({ coins }) {
     textTransform: "capitalize",
   };
 
-
-
   return (
-
     <ThemeProvider theme={theme}>
       <TabContext value={value}>
         <TabList onChange={handleChange} variant="fullWidth">
@@ -47,23 +43,20 @@ export default function TabComponent({ coins }) {
         <TabPanel value="1">
           <div className="gridView">
             {coins.map((coin, index) => {
-              return <Grid coin={coin} key={index} index={index}/>;
+              return <Grid coin={coin} key={index} index={index} />;
             })}
           </div>
         </TabPanel>
         <TabPanel value="2">
-
-          <table className="ListView">
-
-            {coins.map((coin, index) => {
-              return <List coin={coin} key={index} index={index}/>
-            })}
-
+          <table className="ListViewTable">
+            <tbody className="ListView">
+              {coins.map((coin, index) => {
+                return <List coin={coin} key={index} index={index} />;
+              })}
+            </tbody>
           </table>
-
         </TabPanel>
       </TabContext>
     </ThemeProvider>
-
   );
 }

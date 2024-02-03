@@ -1,7 +1,7 @@
 .btn,.outlined-Btn{
     text-align: center;
     padding: 0.8rem;
-    background-color: var(--blue);
+    background-color: var(--primary);
     color: var(--black);
     border-radius: 1.5rem;
     font-weight: 600;
@@ -12,9 +12,9 @@
     cursor: pointer;
 }
 .btn:hover,.outlined-Btn:hover{
-box-shadow: 5px 5px 10px rgba(57, 159, 243, 0.719);
+box-shadow: 5px 5px 10px var(--primary);
 }
 .outlined-Btn{
     background-color: transparent;
-    outline: 1px solid var(--blue);
+    outline: 1px solid var(--primary);
 }

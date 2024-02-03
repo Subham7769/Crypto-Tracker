@@ -5,7 +5,7 @@ import TemporaryDrawer from './Drawer'
 const Header = () => {
   return (
     <nav>
-        <h1>CryptoTracker <span style={{color: "var(--blue)"}}>.</span></h1>
+        <h1>CryptoTracker <span style={{color: "var(--primary)"}}>.</span></h1>
 
         <CommonNavlinks className={"desktopMenu"}/>
 

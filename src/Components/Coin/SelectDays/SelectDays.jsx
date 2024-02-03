@@ -18,14 +18,14 @@ function SelectDays({ days, handleDaysChange}) {
           height: "2.5rem",
           color: "var(--black)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "var(--black)",
+            borderColor: "var(--primary)",
           },
           "& .MuiSvgIcon-root": {
             color: "var(--black)",
           },
           "&:hover": {
             "&& fieldset": {
-              borderColor: "var(--black)",
+              borderColor: "var(--primary)",
             },
           },
         }}

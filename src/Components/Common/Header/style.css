@@ -19,7 +19,7 @@ nav>h1{
     color: var(--black);
 }
 .humburger:hover{
-    color: var(--blue);
+    color: var(--primary);
 }
 .desktopMenu{
     display: flex;
@@ -38,7 +38,7 @@ nav>h1{
     height: 100vh;
 }
 .active{
-    color: var(--blue);
+    color: var(--primary);
 }
 li>*{
     text-decoration: none;

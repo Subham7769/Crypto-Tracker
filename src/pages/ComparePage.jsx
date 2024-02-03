@@ -8,9 +8,9 @@ import { coinObject } from "../functions/convertObject";
 import Loader from "../Components/Common/Loader";
 import List from "../components/Dashboard/List";
 import CoinInfo from "../Components/Coin/CoinInfo";
-import LineChart from '../Components/Coin/LineChart';
+import LineChart from "../Components/Coin/LineChart";
 import { settingChartData } from "../functions/settingChartData";
-
+import Footer from "../components/Common/Footer";
 
 const ComparePage = () => {
   const [crypto1, setCrypto1] = useState("bitcoin");
@@ -69,18 +69,17 @@ const ComparePage = () => {
       if (prices1.length > 0 && prices2.length > 0) {
         console.log("both prices are fetched", prices1, prices2);
         setLoading(false);
-      settingChartData(setChartData,prices1,data1,prices2,data2)
-
+        settingChartData(setChartData, prices1, data1, prices2, data2);
       }
     }
   }
 
   useEffect(() => {
-    getData()
-  }, [crypto1,crypto2, days]);
+    getData();
+  }, [crypto1, crypto2, days]);
 
   return (
-    <div>
+    <section>
       <Header />
       {loading ? (
         <Loader />
@@ -96,20 +95,25 @@ const ComparePage = () => {
             />
             <SelectDays days={days} handleDaysChange={handleDaysChange} />
           </div>
-            <div className="grey-wrapper">
-              <List coin={crypto1Data} delay={0.1} />
-            </div>
-            <div className="grey-wrapper">
-              <List coin={crypto2Data} delay={0.1} />
-            </div>
-            <div className="grey-wrapper">
-              <LineChart chartData={chartData} currency={currency} multiAxis={true} />
-            </div>
+          <div className="grey-wrapper">
+            <List coin={crypto1Data} delay={0.1} />
+          </div>
+          <div className="grey-wrapper">
+            <List coin={crypto2Data} delay={0.1} />
+          </div>
+          <div className="grey-wrapper">
+            <LineChart
+              chartData={chartData}
+              currency={currency}
+              multiAxis={true}
+            />
+          </div>
           <CoinInfo name={crypto1Data.name} desc={crypto1Data.desc} />
           <CoinInfo name={crypto2Data.name} desc={crypto2Data.desc} />
+          <Footer/>
         </>
       )}
-    </div>
+    </section>
   );
 };
 

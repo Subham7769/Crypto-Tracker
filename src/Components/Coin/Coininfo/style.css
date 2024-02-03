@@ -5,8 +5,8 @@ margin: 1rem;
 margin: 1rem;
 }
 .coin-info-desc a{
-    color: var(--blue);
+    color: var(--primary);
 }
 .coin-info-desc a:hover{
-    color: rgb(47, 54, 255);
+    filter: brightness(60%);
 }

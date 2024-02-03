@@ -4,7 +4,8 @@
   --black: rgb(22, 22, 22);
   --white: rgb(238, 238, 238);
   --orange: orange;
-  --blue: #3a80e9;
+  --blue: #a2a2a2b6;
+  --primary: #3a80e9;
   --grey: rgb(156, 155, 155);
   --red: rgb(245, 31, 31);
   --green: rgb(1, 171, 1);
@@ -17,6 +18,7 @@
   --darkgrey: rgb(215, 215, 215);
 }
 .dark {
+
   --black: rgb(245, 245, 245);
   --white: rgb(22, 22, 22);
   --grey: rgb(125, 124, 124);
@@ -41,7 +43,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 ::selection {
-  background-color: var(--blue);
+  background-color: var(--primary);
   color: var(--white);
 }
 /* width */
@@ -56,7 +58,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: var(--primary);
   border-radius: 0.5rem;
 }
 
@@ -74,45 +76,49 @@ body {
   padding: 0.5rem;
 }
 
-.filter{
+.filter {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.coin-days-flex{
+.coin-days-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0rem 2.5rem;
 }
-.WatchListIcon{
+.WatchListIcon {
   position: absolute;
   top: 0.05rem;
   right: 0.05rem;
   z-index: 100;
 }
 
-.IconW{
+.IconW {
   font-size: 2rem;
 }
-.watchlistEmpty{
+.watchlistEmpty {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
 }
+section {
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+}
 
 @media only screen and (max-width: 768px) {
-  .IconW{
-    font-size: 1.5rem!important;
+  .IconW {
+    font-size: 1.5rem !important;
   }
-  .coin-days-flex{
+  .coin-days-flex {
     gap: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-direction: column!important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

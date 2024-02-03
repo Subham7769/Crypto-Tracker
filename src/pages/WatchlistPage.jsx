@@ -8,6 +8,7 @@ import coinsContext from "../Context/coinsContext.jsx";
 import { NavLink } from "react-router-dom";
 import Button from "../Components/Common/Button";
 import SentimentDissatisfiedRoundedIcon from "@mui/icons-material/SentimentDissatisfiedRounded";
+import Footer from "../components/Common/Footer/index.jsx";
 
 const WatchlistPage = () => {
   const { coins, isLoading } = useContext(coinsContext);
@@ -35,7 +36,7 @@ const WatchlistPage = () => {
   }, [coins]); // Re-run the effect when `coins` change
 
   return (
-    <>
+    <section>
       <Header />
       <BacktoTop />
       {isLoading ? (
@@ -47,7 +48,7 @@ const WatchlistPage = () => {
           ) : (
             <div className="watchlistEmpty">
               <p>No Item in Watchlist</p>
-              <SentimentDissatisfiedRoundedIcon style={{fontSize:"7rem",color:"var(--blue)"}}/>
+              <SentimentDissatisfiedRoundedIcon style={{fontSize:"7rem",color:"var(--primary)"}}/>
               <NavLink to="/Dashboard">
                 <Button text={"Dashboard"} outlined={false} />
               </NavLink>
@@ -55,7 +56,8 @@ const WatchlistPage = () => {
           )}
         </div>
       )}
-    </>
+
+    </section>
   );
 };
 
