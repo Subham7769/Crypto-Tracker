@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AddTaskRoundedIcon from "@mui/icons-material/AddTaskRounded";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const WatchListIcon = ({ coinId }) => {
   const [added, setAdded] = useState(false);
@@ -16,15 +18,19 @@ const WatchListIcon = ({ coinId }) => {
     if (added) {
       //remove
       newWatchList = watchListCoinIds.filter((id) => id !== coinId);
+      toast(`${coinId} Removed from Watchlist`)
     } else {
       //add
       newWatchList = [...watchListCoinIds, coinId];
+      toast(`${coinId} Added to Watchlist`)
     }
     localStorage.setItem("watchlist", JSON.stringify(newWatchList));
     setAdded(!added);
 
     // Dispatch a custom event
     window.dispatchEvent(new CustomEvent("watchlistUpdated"));
+
+    
   }
 
   return (

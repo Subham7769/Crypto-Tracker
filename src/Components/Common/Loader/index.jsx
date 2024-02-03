@@ -5,7 +5,7 @@ import './style.css'
 const Loader = () => {
   return (
     <div className='loader-container'>
-        <CircularProgress />
+        <CircularProgress style={{color:"var(--primary)"}} />
     </div>
   )
 }

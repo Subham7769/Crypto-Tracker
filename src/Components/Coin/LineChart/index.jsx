@@ -51,7 +51,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
     },
   };
 
-  return <div><Line data={chartData} options={options} />;</div>
+  return <div><Line data={chartData} options={options} /></div>
 }
 
 export default LineChart;

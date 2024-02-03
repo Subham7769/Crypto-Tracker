@@ -30,6 +30,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+
 /* disable image dragging */
 img {
   -webkit-user-drag: none;

@@ -8,7 +8,7 @@ import "./styles.css";
 function SelectDays({ days, handleDaysChange}) {
   return (
     <div className='filter'>
-      {<p className="label">Price Change in </p>}
+      <p className="label">Price Change in </p>
       <FormControl>
       <Select
         value={days}
