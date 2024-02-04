@@ -6,7 +6,7 @@ import PaginationComponent from "../Components/Dashboard/Pagination/Pagination.j
 import Loader from "../Components/Common/Loader/Loader.jsx";
 import BacktoTop from "../Components/Common/BacktoTop/BacktoTop.jsx";
 import {CoinsContext} from "../Context/CoinsProvider.jsx";
-import Footer from "../components/Common/Footer/Footer.jsx";
+import Footer from "../Components/Common/Footer/Footer.jsx";
 
 const DashboardPage = () => {
   const {coins,isLoading,paginatedCoins,search} = useContext(CoinsContext)
