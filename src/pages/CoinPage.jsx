@@ -11,8 +11,8 @@ import Header from "../Components/Common/Header/Header.jsx";
 import Loader from "../Components/Common/Loader/Loader.jsx";
 import List from "../Components/Dashboard/List/List.jsx";
 import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
-import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
-// import PriceToggle from "../Components/Coin/PriceToggle/PriceToggle.jsx";
+import CoinInfo from "../Components/Coin/Coininfo/CoinInfo.jsx";
+import PriceToggle from "../Components/Coin/PriceToggle/priceToggle.jsx";
 
 function CoinPage() {
   const { currency, setCurrency, isLoading, setLoading } =
@@ -76,17 +76,17 @@ function CoinPage() {
           </table>
           <div className="grey-wrapper upperFilter">
             <SelectDays handleDaysChange={handleDaysChange} days={days} />
-            {/* <PriceToggle
+            <PriceToggle
               handlecurrencyChange={handlecurrencyChange}
               currency={currency}
-            /> */}
+            />
             <LineChart
               chartData={chartData}
               currency={currency}
               multiAxis={false}
             />
           </div>
-          {/* <CoinInfo name={coin.name} desc={coin.desc} /> */}
+          <CoinInfo name={coin.name} desc={coin.desc} />
         </>
       )}
       <Footer />
