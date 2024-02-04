@@ -7,7 +7,7 @@ import getCoinPrices from "../functions/getCoinPrices";
 import { coinObject } from "../functions/convertObject";
 import Loader from "../Components/Common/Loader/Loader.jsx";
 import List from "../Components/Dashboard/List/List.jsx";
-import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
+import Coininfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
 import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import { settingChartData } from "../functions/settingChartData";
 import Footer from "../Components/Common/Footer/Footer.jsx";
