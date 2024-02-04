@@ -1,12 +1,12 @@
 .coin-info-heading{
-margin: 1rem;
-}
-.coin-info-desc{
-margin: 1rem;
-}
-.coin-info-desc a{
-    color: var(--primary);
-}
-.coin-info-desc a:hover{
-    filter: brightness(60%);
-}
+    margin: 1rem;
+    }
+    .coin-info-desc{
+    margin: 1rem;
+    }
+    .coin-info-desc a{
+        color: var(--primary);
+    }
+    .coin-info-desc a:hover{
+        filter: brightness(60%);
+    }
