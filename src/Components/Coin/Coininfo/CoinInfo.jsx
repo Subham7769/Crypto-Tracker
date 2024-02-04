@@ -21,7 +21,7 @@ const CoinInfo = ({ heading, desc }) => {
         />
       )}
     </div>
-  );
+  )
 };
 
 export default CoinInfo;
