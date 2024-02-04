@@ -4,7 +4,7 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import WatchListIcon from "../../WatchList/WatchListIcon";
+import WatchListIcon from "../../WatchListIcon/WatchListIcon.jsx";
 
 const Grid = ({ coin,index }) => {
 

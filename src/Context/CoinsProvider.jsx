@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import coinsContext from "./coinsContext.jsx";
+import CoinsContext from "./CoinsContext.jsx";
 
 const CoinsProvider = ({ children }) => {
   const [coins, setCoins] = useState([]);
@@ -84,7 +84,7 @@ const CoinsProvider = ({ children }) => {
 
   
   return (
-    <coinsContext.Provider
+    <CoinsContext.Provider
       value={{
         coins,
         filteredCoins,
@@ -105,7 +105,7 @@ const CoinsProvider = ({ children }) => {
       }}
     >
       {children}
-    </coinsContext.Provider>
+    </CoinsContext.Provider>
   );
 };
 

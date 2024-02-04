@@ -1,10 +1,10 @@
+import { Route,Routes } from 'react-router-dom';
 import React from 'react'
 import HomePage from './pages/HomePage.jsx';
 import ComparePage from './pages/ComparePage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
 import CoinPage from './pages/CoinPage.jsx';
 import WatchlistPage from './pages/WatchlistPage.jsx';
-import { Route,Routes } from 'react-router-dom';
 
 
 const App = () => {

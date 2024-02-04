@@ -3,11 +3,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import "./style.css";
-import coinsContext from "../../Context/coinsContext";
+import CoinsContext from "../../../Context/CoinsContext";
 
 const SelectCoins = ({ crypto1,  crypto2, handleCoinChange}) => {
 
-  const{coins} = useContext(coinsContext)
+  const{coins} = useContext(CoinsContext)
   const styles = {
     height: "2.5rem",
     color: "var(--black)",

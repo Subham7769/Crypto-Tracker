@@ -1,7 +1,7 @@
 import "./style.css";
 import phone from "../../assets/phone.png";
 import gradient from "../../assets/gradient.png";
-import Button from "../Common/Button";
+import Button from "../Common/Button/Button.jsx";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";

@@ -3,7 +3,7 @@ import './style.css';
 import Sun from '@iconscout/react-unicons/icons/uil-sun'
 import Moon from '@iconscout/react-unicons/icons/uil-moon'
 import { useState,useEffect } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

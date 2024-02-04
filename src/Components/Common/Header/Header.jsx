@@ -1,6 +1,6 @@
 import "./style.css";
-import CommonNavlinks from "./CommonNavlinks";
-import TemporaryDrawer from "./Drawer";
+import CommonNavlinks from "./CommonNavlinks.jsx";
+import TemporaryDrawer from "./Drawer.jsx";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";

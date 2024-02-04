@@ -1,22 +1,22 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoinInfo from "../Components/Coin/CoinInfo";
-import LineChart from "../Components/Coin/LineChart";
-import Footer from "../components/Common/Footer";
-import Header from "../Components/Common/Header";
-import Loader from "../Components/Common/Loader";
-import List from "../components/Dashboard/List";
+import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
+import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
+import Footer from "../Components/Common/Footer/Footer.jsx";
+import Header from "../Components/Common/Header/Header.jsx";
+import Loader from "../Components/Common/Loader/Loader.jsx";
+import List from "../Components/Dashboard/List/List.jsx";
 import { coinObject } from "../functions/convertObject";
 import getCoinData from "../functions/getCoinData";
 import getCoinPrices from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
-import SelectDays from "../Components/Coin/SelectDays/selectDays";
-import PriceToggle from "../Components/Coin/PriceToggle/priceToggle";
-import coinsContext from "../Context/coinsContext";
+import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
+import PriceToggle from "../Components/Coin/PriceToggle/PriceToggle.jsx";
+import CoinsContext from "../Context/CoinsContext";
 
 function CoinPage() {
   const { currency, setCurrency, isLoading, setLoading } =
-    useContext(coinsContext);
+    useContext(CoinsContext);
   const { id } = useParams();
   const [coin, setCoin] = useState();
   const [days, setDays] = useState(30);

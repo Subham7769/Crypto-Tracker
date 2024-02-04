@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import './style.css'
 import SearchIcon from '@mui/icons-material/Search';
-import coinsContext from '../../../Context/coinsContext';
+import CoinsContext from '../../../Context/CoinsContext';
 
 const Search = () => {
-  const {search, setSearch} = useContext(coinsContext)
+  const {search, setSearch} = useContext(CoinsContext)
 
 
   return (

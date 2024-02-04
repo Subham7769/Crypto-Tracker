@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Toggle from '../Toggle'
-import Button from '../Button'
+import Toggle from '../Toggle/Toggle.jsx'
+import Button from '../Button/Button.jsx'
 
 const Navlinks = ({className}) => {
   return (

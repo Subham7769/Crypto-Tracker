@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Components/Common/Header";
-import TabComponent from "../Components/Dashboard/TabComponent";
-import Loader from "../Components/Common/Loader";
-import BacktoTop from "../Components/Common/BacktoTop";
 import { useContext } from "react";
-import coinsContext from "../Context/coinsContext.jsx";
 import { NavLink } from "react-router-dom";
-import Button from "../Components/Common/Button";
 import SentimentDissatisfiedRoundedIcon from "@mui/icons-material/SentimentDissatisfiedRounded";
-import Footer from "../components/Common/Footer/index.jsx";
+import Header from "../Components/Common/Header/Header.jsx";
+import TabComponent from "../Components/Dashboard/TabComponent/TabComponent.jsx";
+import Loader from "../Components/Common/Loader/Loader.jsx";
+import CoinsContext from "../Context/CoinsContext.jsx";
+import BacktoTop from "../Components/Common/BacktoTop/BacktoTop.jsx";
+import Button from "../Components/Common/Button/Button.jsx";
 
 const WatchlistPage = () => {
-  const { coins, isLoading } = useContext(coinsContext);
+  const { coins, isLoading } = useContext(CoinsContext);
   const [watchListItems, setWatchListItems] = useState([]);
 
   useEffect(() => {

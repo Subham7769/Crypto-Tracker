@@ -6,7 +6,7 @@ import { Tooltip } from "@mui/material";
 import { convertNumber } from "../../../functions/convertNumber.js";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import WatchListIcon from "../../WatchList/WatchListIcon.jsx";
+import WatchListIcon from "../../WatchListIcon/WatchListIcon.jsx";;
 
 const List = ({ coin, index }) => {
   return (

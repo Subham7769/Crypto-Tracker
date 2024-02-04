@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Components/Common/Header";
-import SelectCoins from "../Components/Compare/SelectCoins";
+import Header from "../Components/Common/Header/Header.jsx";
+import SelectCoins from "../Components/Compare/SelectCoins/SelectCoins.jsx";
 import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
 import getCoinData from "../functions/getCoinData";
 import getCoinPrices from "../functions/getCoinPrices";
 import { coinObject } from "../functions/convertObject";
-import Loader from "../Components/Common/Loader";
-import List from "../components/Dashboard/List";
-import CoinInfo from "../Components/Coin/CoinInfo";
-import LineChart from "../Components/Coin/LineChart";
+import Loader from "../Components/Common/Loader/Loader.jsx";
+import List from "../Components/Dashboard/List/List.jsx";
+import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
+import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import { settingChartData } from "../functions/settingChartData";
-import Footer from "../components/Common/Footer";
+import Footer from "../Components/Common/Footer/Footer.jsx";
 
 const ComparePage = () => {
   const [crypto1, setCrypto1] = useState("bitcoin");
