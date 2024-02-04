@@ -10,7 +10,7 @@ import List from "../Components/Dashboard/List/List.jsx";
 import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import { settingChartData } from "../functions/settingChartData";
 import Footer from "../Components/Common/Footer/Footer.jsx";
-import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
+import CoinInfo from "../Components/Coin/Coininfo/CoinInfo.jsx";
 
 const ComparePage = () => {
   const [crypto1, setCrypto1] = useState("bitcoin");
