@@ -4,7 +4,6 @@ const CoinsContext = createContext();
 
 
 const CoinsProvider = ({ children }) => {
-
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
