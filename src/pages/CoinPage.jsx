@@ -12,7 +12,7 @@ import getCoinPrices from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
 import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
 import PriceToggle from "../Components/Coin/PriceToggle/PriceToggle.jsx";
-import CoinsContext from "../Context/CoinsContext";
+import {CoinsContext} from "../Context/CoinsProvider.jsx";
 
 function CoinPage() {
   const { currency, setCurrency, isLoading, setLoading } =

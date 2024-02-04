@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
-import CoinsContext from "./CoinsContext.jsx";
+import { createContext, useEffect, useState } from "react";
+// import CoinsContext from "./CoinsContext.jsx";
+const CoinsContext = createContext();
+
 
 const CoinsProvider = ({ children }) => {
-  
+
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
@@ -110,4 +112,4 @@ const CoinsProvider = ({ children }) => {
   );
 };
 
-export default CoinsProvider;
+export  {CoinsContext,CoinsProvider};

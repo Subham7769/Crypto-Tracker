@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './style.css'
 import SearchIcon from '@mui/icons-material/Search';
-import CoinsContext from '../../../Context/CoinsContext';
+import {CoinsContext} from '../../../Context/CoinsProvider.jsx';
 
 const Search = () => {
   const {search, setSearch} = useContext(CoinsContext)

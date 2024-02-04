@@ -5,7 +5,7 @@ import SentimentDissatisfiedRoundedIcon from "@mui/icons-material/SentimentDissa
 import Header from "../Components/Common/Header/Header.jsx";
 import TabComponent from "../Components/Dashboard/TabComponent/TabComponent.jsx";
 import Loader from "../Components/Common/Loader/Loader.jsx";
-import CoinsContext from "../Context/CoinsContext.jsx";
+import {CoinsContext} from "../Context/CoinsProvider.jsx";
 import BacktoTop from "../Components/Common/BacktoTop/BacktoTop.jsx";
 import Button from "../Components/Common/Button/Button.jsx";
 

@@ -3,7 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import "./style.css";
-import CoinsContext from "../../../Context/CoinsContext";
+import {CoinsContext} from "../../../Context/CoinsProvider.jsx";
 
 const SelectCoins = ({ crypto1,  crypto2, handleCoinChange}) => {
 

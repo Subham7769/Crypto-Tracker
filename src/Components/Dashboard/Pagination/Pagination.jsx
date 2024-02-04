@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Pagination from "@mui/material/Pagination";
 import './style.css'
-import CoinsContext from "../../../Context/CoinsContext";
+import {CoinsContext} from "../../../Context/CoinsProvider.jsx";
 
 const PaginationComponent = () => {
   const {page,handlePageChange}= useContext(CoinsContext)

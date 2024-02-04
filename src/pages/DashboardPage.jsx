@@ -5,7 +5,7 @@ import Search from "../Components/Dashboard/Search/Search.jsx";
 import PaginationComponent from "../Components/Dashboard/Pagination/Pagination.jsx";
 import Loader from "../Components/Common/Loader/Loader.jsx";
 import BacktoTop from "../Components/Common/BacktoTop/BacktoTop.jsx";
-import CoinsContext from "../Context/CoinsContext";;
+import {CoinsContext} from "../Context/CoinsProvider.jsx";
 import Footer from "../components/Common/Footer/Footer.jsx";
 
 const DashboardPage = () => {
