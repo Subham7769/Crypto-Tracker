@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Common/Header";
 import SelectCoins from "../Components/Compare/SelectCoins";
-import SelectDays from "../Components/Coin/SelectDays/selectDays";
+import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
 import getCoinData from "../functions/getCoinData";
 import getCoinPrices from "../functions/getCoinPrices";
 import { coinObject } from "../functions/convertObject";

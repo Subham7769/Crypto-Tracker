@@ -2,6 +2,9 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto"; //Dont get rid of this
 import { convertNumber } from "../../../functions/convertNumber";
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
+
 
 function LineChart({ chartData, priceType, multiAxis }) {
   const options = {
@@ -51,7 +54,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
     },
   };
 
-  return <div><Line data={chartData} options={options} /></div>
+  return <div><Line data={chartData} options={options} />;</div>
 }
 
 export default LineChart;
