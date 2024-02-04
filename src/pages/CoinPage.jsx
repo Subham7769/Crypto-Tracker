@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { coinObject } from "../functions/convertObject";
+import { settingChartData } from "../functions/settingChartData";
+import {CoinsContext} from "../Context/CoinsProvider.jsx";
+import getCoinData from "../functions/getCoinData";
+import getCoinPrices from "../functions/getCoinPrices";
 import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import Footer from "../Components/Common/Footer/Footer.jsx";
 import Header from "../Components/Common/Header/Header.jsx";
 import Loader from "../Components/Common/Loader/Loader.jsx";
 import List from "../Components/Dashboard/List/List.jsx";
-import { coinObject } from "../functions/convertObject";
-import getCoinData from "../functions/getCoinData";
-import getCoinPrices from "../functions/getCoinPrices";
-import { settingChartData } from "../functions/settingChartData";
 import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
 import PriceToggle from "../Components/Coin/PriceToggle/PriceToggle.jsx";
-import {CoinsContext} from "../Context/CoinsProvider.jsx";
 import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
 
 function CoinPage() {
