@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
+import CoinInfo from '../Components/Coin/CoinInfo/CoinInfo.jsx'
 import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import Footer from "../Components/Common/Footer/Footer.jsx";
 import Header from "../Components/Common/Header/Header.jsx";
