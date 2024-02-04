@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoinInfo from '../Components/Coin/CoinInfo/CoinInfo.jsx'
+import CoinInfo from "../Components/Coin/CoinInfo/CoinInfo.jsx";
 import LineChart from "../Components/Coin/LineChart/LineChart.jsx";
 import Footer from "../Components/Common/Footer/Footer.jsx";
 import Header from "../Components/Common/Header/Header.jsx";
@@ -14,7 +14,7 @@ import SelectDays from "../Components/Coin/SelectDays/SelectDays.jsx";
 import PriceToggle from "../Components/Coin/PriceToggle/PriceToggle.jsx";
 import {CoinsContext} from "../Context/CoinsProvider.jsx";
 
-export function CoinPage() {
+function CoinPage() {
   const { currency, setCurrency, isLoading, setLoading } =
     useContext(CoinsContext);
   const { id } = useParams();
@@ -94,4 +94,4 @@ export function CoinPage() {
   );
 }
 
-
+export default CoinPage;
