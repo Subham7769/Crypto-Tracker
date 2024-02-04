@@ -1,5 +1,5 @@
-import { createContext } from "react";
+// import { createContext } from "react";
 
-const CoinsContext = createContext()
+// const CoinsContext = createContext()
 
-export default CoinsContext
+// export default CoinsContext
