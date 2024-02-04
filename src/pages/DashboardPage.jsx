@@ -7,6 +7,7 @@ import Loader from "../Components/Common/Loader/Loader.jsx";
 import BacktoTop from "../Components/Common/BacktoTop/BacktoTop.jsx";
 import {CoinsContext} from "../Context/CoinsProvider.jsx";
 import Footer from "../Components/Common/Footer/Footer.jsx";
+import Filters from "../Components/Dashboard/Filters/Filters.jsx";
 
 const DashboardPage = () => {
   const {coins,isLoading,paginatedCoins,search} = useContext(CoinsContext)
@@ -28,6 +29,7 @@ const DashboardPage = () => {
       ) : (
         <div>
           <Search/>
+          <Filters/>
           <TabComponent coins={search ? filteredCoins : paginatedCoins} />
           {!search && (
             <PaginationComponent/>

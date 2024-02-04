@@ -117,7 +117,7 @@ const Header = () => {
         }}
         className="Themeslider"
       >
-        <KeyboardArrowDownIcon
+        <KeyboardArrowDownIcon style={{transform: show?"rotateX(180deg)":"rotateX(0deg)"}}
           className="slidericon"
           onClick={() => setShow(!show)}
         />

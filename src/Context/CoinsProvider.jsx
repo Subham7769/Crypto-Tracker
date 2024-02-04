@@ -12,8 +12,8 @@ const CoinsProvider = ({ children }) => {
   const [isSearching, setSearching] = useState(false);
   const [currency, setCurrency] = useState("USD");
   const [currencySymbol, setCurrencySymbol] = useState("$");
-  const [sortType, setSortType] = useState("popularity");
   const [filteredCoins, setFilteredCoins] = useState([]);
+  const [sortType, setSortType] = useState("popularity");
   
   
   const handlePageChange = (e, value) => {
@@ -90,18 +90,18 @@ const CoinsProvider = ({ children }) => {
       value={{
         coins,
         filteredCoins,
+        currencySymbol,
+        onSearchChange,
+        paginatedCoins,
+        isSearching,
         search,
         setSearch,
-        onSearchChange,
         isLoading,
         setLoading,
         page,
         handlePageChange,
-        paginatedCoins,
-        isSearching,
         currency,
         setCurrency,
-        currencySymbol,
         sortType,
         setSortType,
       }}

@@ -2,11 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Toggle from '../Toggle/Toggle.jsx'
 import Button from '../Button/Button.jsx'
+import CurrencySelect from './CurrencySelect.jsx'
 
 const Navlinks = ({className}) => {
   return (
     <div>
     <ul className={className}>
+        <li>
+            <CurrencySelect/>
+        </li>
         <li>
             <Toggle/>
         </li>

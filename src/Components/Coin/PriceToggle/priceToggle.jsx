@@ -3,14 +3,14 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import React, { useState } from "react";
 import "./styles.css";
 
-function PriceToggle({ priceType, handlePriceTypeChange }) {
+function PriceToggle({ currency, handlecurrencyChange }) {
   return (
     <div className="toggle-div">
       <ToggleButtonGroup
         color="primary"
-        value={priceType}
+        value={currency}
         exclusive
-        onChange={handlePriceTypeChange}
+        onChange={handlecurrencyChange}
         sx={{
           "&.Mui-selected": {
             color: "var(--primary) !important",

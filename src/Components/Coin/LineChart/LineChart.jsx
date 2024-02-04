@@ -1,12 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto"; //Dont get rid of this
 import { convertNumber } from "../../../functions/convertNumber";
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
+import {CoinsContext} from "../../../Context/CoinsProvider.jsx"
+
 
 
 function LineChart({ chartData, priceType, multiAxis }) {
+  const {currencySymbol} = useContext(CoinsContext)
   const options = {
     plugins: {
       legend: {
@@ -28,9 +31,9 @@ function LineChart({ chartData, priceType, multiAxis }) {
             if (priceType == "total_volumes") {
               return convertNumber(value);
             } else if (priceType == "market_caps") {
-              return "$" + convertNumber(value);
+              return currencySymbol + convertNumber(value);
             } else {
-              return "$" + value.toLocaleString();
+              return currencySymbol + value.toLocaleString();
             }
           },
         },
@@ -44,9 +47,9 @@ function LineChart({ chartData, priceType, multiAxis }) {
             if (priceType == "total_volumes") {
               return convertNumber(value);
             } else if (priceType == "market_caps") {
-              return "$" + convertNumber(value);
+              return currencySymbol + convertNumber(value);
             } else {
-              return "$" + value.toLocaleString();
+              return currencySymbol + value.toLocaleString();
             }
           },
         },
