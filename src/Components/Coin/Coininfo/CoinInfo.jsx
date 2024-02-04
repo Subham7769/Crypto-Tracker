@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-const CoinInfo = ({ heading, desc }) => {
+function CoinInfo ({ heading, desc }) {
   const shortDesc = desc.slice(0, 300) + "<p  style='color:var(--grey)'> Read More...</p>";
   const longDesc = desc + "<p  style='color:var(--grey)'> Read Less...</p>";
   const [expand, setExpand] = useState(false);
